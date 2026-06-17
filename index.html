@@ -3,61 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my_portfolio</title>
+    <title>My Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
-<body>
-        <h1><b>Sourav Sikder Joy</b></h1>
-        <h3>I am a student of <b>CSE</b> at<u> <i>University of Rajshahi</i></h3></u>
-        
-        <img src="Sourav_sikder_Joy.jpg" alt="Sourav Sikder Joy" height="450">
-        <hr>
 
-       <i><h2>Education</h2></i>
-       <ul>
-            <li><b>School: </b><i>Monipur High School,Dhaka</i><br>
-                <i>SSC gpa: </i><b>5.00</b></li>
-            <br>
-            <li><b>College: </b><i>BPATC college,Savar</i><br>
-                <i>HSC gpa: </i><b>5.00</b></li>
-            <br>
-            <li><b>University: </b><i>University of Rajshahi</i><br>
-                <mark><i>Currently studying</i></mark></li>
-        </ul>
-        <br>
-        <i><h2>Skills</h2></i>
-        <ul>
-            <li><i>C,C++</i></li>
-            <li><i>Java</i></li>
-            <li><i>Verilog</i></li>
-            <li><i><del>PHP</del>  <ins>Python</ins></i></li>
-        </ul>
+<body class="bg-light">
 
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">My Portfolio</a>
 
-        <br>
-        <h2>Contacts</h2>
-        <table border="1">
-           <tr align="center">    
-                <th width="150"><b><i>Facebook</i></b></th>
-                <th width="120"><b><i>Mobile No.</i></b></th>
-                <th width="180"><b><i>Email</i></b></th>       
-           </tr>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-           <tr align="center">
-                <td><a href="https://www.facebook.com/sourav.sikderjoy.5" target="_blank"> <b><i>Sourav Sikder Joy</i></b></a></td>
-                <td><i><b>01627490712</b></i></td>
-                <td><i><b>s2410676135@ru.ac.bd</b></i></td>
-           </tr>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-      
+<!-- Main Container -->
+<div class="container my-5">
+
+    <!-- Profile -->
+    <div class="card shadow-sm p-4 text-center">
+
+        <img src="Sourav_sikder_Joy.jpg"
+             alt="Profile"
+             class="rounded-circle border border-3 border-primary shadow"
+             width="200">
+
+        <h1 class="fw-bold mt-3">Sourav Sikder Joy</h1>
+
+        <p class="lead text-secondary">
+            CSE Student at <strong>University of Rajshahi</strong>
+        </p>
+
+        <div class="mt-3">
+            <a href="mailto:s2410676135@ru.ac.bd" class="btn btn-primary me-2">
+                <i class="bi bi-envelope-fill"></i> Email Me
+            </a>
+
+            <a href="https://www.facebook.com/sourav.sikderjoy.5"
+               target="_blank"
+               class="btn btn-outline-dark">
+                <i class="bi bi-facebook"></i> Facebook
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Education -->
+    <h2 class="mt-5 mb-3" id="education">Education</h2>
+
+    <div class="row g-3">
+
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5>School</h5>
+                    <p>Monipur High School, Dhaka</p>
+                    <span class="badge bg-success">SSC GPA 5.00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5>College</h5>
+                    <p>BPATC College, Savar</p>
+                    <span class="badge bg-success">HSC GPA 5.00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5>University</h5>
+                    <p>University of Rajshahi</p>
+                    <span class="badge bg-warning text-dark">Currently Studying</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Skills -->
+    <h2 class="mt-5 mb-3" id="skills">Skills</h2>
+
+    <div class="mb-4">
+        <span class="badge bg-primary p-2 me-1">C</span>
+        <span class="badge bg-success p-2 me-1">C++</span>
+        <span class="badge bg-warning text-dark p-2 me-1">Java</span>
+        <span class="badge bg-info text-dark p-2 me-1">Verilog</span>
+        <span class="badge bg-dark p-2">Python</span>
+    </div>
+
+    <!-- Contact -->
+    <h2 class="mt-5 mb-3" id="contact">Contact</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover text-center shadow-sm">
+            <thead class="table-dark">
+                <tr>
+                    <th><i class="bi bi-facebook"></i> Facebook</th>
+                    <th><i class="bi bi-telephone-fill"></i> Phone</th>
+                    <th><i class="bi bi-envelope-fill"></i> Email</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="https://www.facebook.com/sourav.sikderjoy.5" target="_blank">
+                            Sourav Sikder Joy
+                        </a>
+                    </td>
+                    <td>01627490712</td>
+                    <td>s2410676135@ru.ac.bd</td>
+                </tr>
+            </tbody>
         </table>
+    </div>
 
-        
-        <br>
-        <h2>Interests</h2>
-        <ul>
-            <li><i><b>AI & ML</b></i></li>
-            <li><i><b>Blockchain</b></i></li>
-            <li><i><b>Gaming</b></i></li>
-        </ul>
+    <!-- Interests -->
+    <h2 class="mt-5 mb-3">Interests</h2>
+
+    <div>
+        <span class="badge rounded-pill bg-danger fs-6 me-1">AI & ML</span>
+        <span class="badge rounded-pill bg-primary fs-6 me-1">Blockchain</span>
+        <span class="badge rounded-pill bg-success fs-6">Gaming</span>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3 mt-5">
+    <p class="mb-0">
+        © 2026 Sourav Sikder Joy | Built with
+        <i class="bi bi-bootstrap-fill text-primary"></i> Bootstrap
+    </p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
